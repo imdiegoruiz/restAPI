@@ -6,10 +6,10 @@ from .models import Document, Typification
 class TypificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Typification
-        fields = ('name',)
+        fields = ('id', 'name',)
 
 
 class DocumentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Document
-        fields = ('name', 'type_document', 'amount', 'typification')
+        fields = ('id', 'name', 'type_document', 'amount', 'typification', 'price', 'created_at', 'updated_at',)
