@@ -49,7 +49,8 @@ http://localhost:8000/api/all/
         "created_at": "2022-09-23T01:59:48.252288Z",
         "updated_at": "2022-09-23T01:59:48.252580Z"
     }
-]```
+]
+```
 
 ## PUT one document:
 
