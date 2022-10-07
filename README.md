@@ -7,11 +7,12 @@ http://localhost:8000/api/create/
 
 ``` 
 {
-    "name": "El gran billete",
-    "type_document": 1,
-    "amount": 100,
-    "typification": 1,
-    "price": 10.0
+"name": "Las mascotas 2",
+"type_document": 2,
+"amount": 10,
+"typification": 2,
+"price":222,
+"image":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...."
 }
 ```
 
@@ -21,34 +22,26 @@ http://localhost:8000/api/all/
 ``` 
 [
     {
-        "id": 1,
-        "name": "La princesita final",
+        "id": 13,
+        "name": "Las mascotas 1",
         "type_document": 1,
-        "amount": 10,
+        "amount": 23,
         "typification": 1,
-        "price": "5.00",
-        "created_at": "2022-09-23T01:55:46.683327Z",
-        "updated_at": "2022-09-23T01:55:46.693576Z"
+        "price": "200.82",
+        "image": "http://localhost:8000/documents/1f084019-ce3d-4a0f-8bfb-56d85e0dbc56.png",
+        "created_at": "2022-10-07T03:20:49.329078Z",
+        "updated_at": "2022-10-07T03:20:49.329078Z"
     },
     {
-        "id": 2,
-        "name": "Vendes o Vendes",
+        "id": 14,
+        "name": "Las mascotas 2",
         "type_document": 2,
-        "amount": 5,
-        "typification": 6,
-        "price": "5.00",
-        "created_at": "2022-09-23T01:55:46.683327Z",
-        "updated_at": "2022-09-23T01:55:46.693576Z"
-    },
-    {
-        "id": 3,
-        "name": "Los gatos felices",
-        "type_document": 1,
         "amount": 10,
-        "typification": 1,
-        "price": "15.50",
-        "created_at": "2022-09-23T01:59:48.252288Z",
-        "updated_at": "2022-09-23T01:59:48.252580Z"
+        "typification": 2,
+        "price": "222.00",
+        "image": "http://localhost:8000/documents/c75b25e2-9a0d-450b-a137-18cf46ff9b47.jpg",
+        "created_at": "2022-10-07T03:21:46.875995Z",
+        "updated_at": "2022-10-07T03:21:46.875995Z"
     }
 ]
 ```
@@ -60,12 +53,13 @@ http://localhost:8000/api/update/1/
 
 ``` 
 {
-        "name": "La princesita final",
-        "type_document": 1,
-        "amount": 10,
-        "typification": 1,
-        "price":10
- }
+"name": "Las mascotas 2",
+"type_document": 2,
+"amount": 10,
+"typification": 2,
+"price":222,
+"image":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...."
+}
 ```
 
 #### GET one document:

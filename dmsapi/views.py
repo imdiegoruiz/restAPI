@@ -27,11 +27,9 @@ def api_overview(request):
 @api_view(['POST'])
 def add_documents(request):
     document = DocumentSerializer(data=request.data)
-
     # validating for already existing data
     if Document.objects.filter(**request.data).exists():
         raise serializers.ValidationError('This data already exists')
-
     if document.is_valid():
         document.save()
         return Response(document.data)
@@ -54,12 +52,13 @@ def update_document(request, pk):
 @api_view(['GET'])
 def view_document(request, pk):
     document = Document.objects.get(pk=pk)
-    data = DocumentSerializer(document)
+    data = DocumentSerializer(document, context={"request": request})
 
     if data:
         return Response(data.data)
     else:
         return Response(status=status.HTTP_404_NOT_FOUND)
+
 
 @api_view(['DELETE'])
 def delete_document(request, pk):
@@ -76,11 +75,10 @@ def view_documents(request):
         documents = Document.objects.filter(**request.query_params.dict())
     # if there is something in documents else raise error
     if documents:
-        data = DocumentSerializer(documents, many=True)
+        data = DocumentSerializer(documents, many=True, context={"request": request})
         return Response(data.data)
     else:
         return Response(status=status.HTTP_404_NOT_FOUND)
-
 
 
 @api_view(['POST'])
