@@ -14,4 +14,4 @@ toml==0.10.2
 tzdata==2022.2
 update==0.0.1
 whitenoise==6.2.0
-drf-extra-fields=3.4.0
+drf-extra-fields==3.4.0
